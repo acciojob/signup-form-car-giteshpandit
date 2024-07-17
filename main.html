@@ -8,6 +8,122 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="radio"] {
+            width: auto;
+        }
+        .form-container .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Signup Form Car</h2>
+    <form action="/submit" method="post">
+        <!-- Name Field -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+
+        <!-- Email Field -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <!-- Gender Field -->
+        <label>Gender</label>
+        <div class="radio-group">
+            <label for="gender_m">Male</label>
+            <input type="radio" id="gender_m" name="gender" value="male" required>
+            <label for="gender_f">Female</label>
+            <input type="radio" id="gender_f" name="gender" value="female" required>
+        </div>
+
+        <!-- Car Brands Field -->
+        <label for="cars">Car Brands</label>
+        <select id="cars" name="cars" required>
+            <option value="">--Please choose an option--</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <!-- Age Field -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Age" required>
+
+        <!-- DOB Field -->
+        <label for="dob">DOB</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Phone Number Field -->
+        <label for="tel">Phone Number</label>
+        <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+
+        <!-- Password Field -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <!-- TOS Field -->
+        <label for="tos">
+            <input type="checkbox" id="tos" name="tos" required>
+            I agree to the TOS
+        </label>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</div>
     <script type="text/javascript" src="./script.js">
 </script>
 
